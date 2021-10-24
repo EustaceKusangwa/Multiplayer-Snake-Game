@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang ='en'>
+<head>
+    <meta charset ='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multi-Player Snake Game</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <style>
+        #gameScreen {
+            display: none;
+            background-color: #fff !important;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center" id="hide_header">
+        <h3>WELCOME TO GAME WORLD 🚀 </h3>
+    </header>
+    <main id="initialScreen">
+        <div class="container mt-5">
+            <div class="row grid">
+                <div class="col column1 mr-5">
+                    <div class="img_content eustace_image"></div>
+
+                </div>
+                <div class="col column2">
+                
+                        <div class="container">
+                            <div class="second_column_title"><h4>Multiplayer Snake Game</h4></div>                      
+                            <button type="submit" class="btn btn-success" id="newGameButton">
+                                Create New Game
+                            </button>
+                            <div class="option_area"><strong>OR</strong></div>                  
+                            <input class="form-control input_area text-center" type="text" placeholder="enter game code" id="gameCodeInput">                       
+                            <button type="submit" class="btn btn-success" id="joinGameButton">Join Game</button>
+                        </div>
+                    
+                    
+                </div>
+               
+            </div>
+        </div>
+
+    </main>
+    <div id="gameScreen" class="game_screen">
+        <div class="d-flex flex-column align-items-center justify-content-center">
+            <h3>Your game Code is: <span id="gameCodeDisplay"></span></h3>
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+    
+    <footer class="text-center">
+        <p>copyright &copy; <script>document.write(new Date().getFullYear()); </script>. All Rights Reserved. </p>
+        <p>Developed with ❤️ by: Eustace Kusangwa</p>
+
+    </footer>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="index.js"></script> 
+</body>
+</html>
